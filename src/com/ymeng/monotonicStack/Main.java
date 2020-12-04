@@ -11,5 +11,7 @@ public class Main {
         System.out.println("Input array: " + Arrays.toString(arr));
         System.out.println("Window size: " + w);
         System.out.println("Result: " + Arrays.toString(res_q1));
+
+        Q2_NumOfSubArr q2 = new Q2_NumOfSubArr();
     }
 }
