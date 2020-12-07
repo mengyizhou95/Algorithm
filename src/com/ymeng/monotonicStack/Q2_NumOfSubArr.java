@@ -39,7 +39,9 @@ public class Q2_NumOfSubArr {
                 }
                 r++;
             }
+            //既然得到了这个非法位置，就可以收集结果了
             res += r - l;
+            //之后L要向左扩张了，那么要考察他影不影响qmax/qmin
             if (qmin.peekFirst() == l) {
                 qmin.pollFirst();
             }
@@ -52,6 +54,7 @@ public class Q2_NumOfSubArr {
     }
 }
 /**
+ * 注意两个结论：
  * 1 如果L —— R已经达标，那么在此范围内的任意子数组均达标
  * 2 如果L —— R已经不达标，那么R往右扩大，L往左扩大，必定也不达标
  */
